@@ -1,12 +1,15 @@
 package com.pro.foodorder.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -15,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.pro.foodorder.R;
 import com.pro.foodorder.activity.ChangePasswordActivity;
+import com.pro.foodorder.activity.InformationActivity;
 import com.pro.foodorder.activity.MainActivity;
 import com.pro.foodorder.activity.OrderHistoryActivity;
 import com.pro.foodorder.activity.SignInActivity;
@@ -33,11 +37,12 @@ public class AccountFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         fragmentAccountBinding = FragmentAccountBinding.inflate(inflater, container, false);
 
-        fragmentAccountBinding.tvEmail.setText(DataStoreManager.getUser().getEmail());
+//        fragmentAccountBinding.tvEmail.setText(DataStoreManager.getUser().getEmail());
 
         fragmentAccountBinding.layoutSignOut.setOnClickListener(v -> onClickSignOut());
         fragmentAccountBinding.layoutChangePassword.setOnClickListener(v -> onClickChangePassword());
         fragmentAccountBinding.layoutOrderHistory.setOnClickListener(v -> onClickOrderHistory());
+        fragmentAccountBinding.layoutInformation.setOnClickListener(v -> onClickInformation());
 
         loadDataCart();
         return fragmentAccountBinding.getRoot();
@@ -48,6 +53,11 @@ public class AccountFragment extends BaseFragment {
         if (getActivity() != null) {
             ((MainActivity) getActivity()).setToolBar(false, getString(R.string.account));
         }
+    }
+
+
+    private void onClickInformation() {
+        GlobalFunction.startActivity(getActivity(), InformationActivity.class);
     }
 
     private void onClickOrderHistory() {
@@ -79,9 +89,13 @@ public class AccountFragment extends BaseFragment {
     }
 
     private void setDataUser(User user) {
+
+
         fragmentAccountBinding.tvName.setText(user.getName());
-        fragmentAccountBinding.tvAddress.setText(user.getAddress());
-        fragmentAccountBinding.tvPhone.setText(user.getPhone());
+        fragmentAccountBinding.tvName.setAllCaps(true);
+
+//        fragmentAccountBinding.tvAddress.setText(user.getAddress());
+//        fragmentAccountBinding.tvPhone.setText(user.getPhone());
     }
 
 

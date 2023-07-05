@@ -26,8 +26,13 @@
 
                 <com.pro.foodorder.widget.AspectRatioNoRadiusImageView
                     android:id="@+id/image_food"
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:scaleType="centerCrop"
                     app:aspectRatio="0.56"
                     app:aspectRatioEnabled="true"
@@ -82,7 +87,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/define_dimen_2"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/black"
+                        android:hint="1000 đ"
                         android:layout_marginStart="@dimen/define_dimen_5"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />

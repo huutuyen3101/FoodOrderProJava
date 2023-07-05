@@ -107,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/black_overlay"
+        android:background="@color/white"
         android:padding="@dimen/define_dimen_10">
 
         <TextView
@@ -127,9 +127,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_size_normal"
-            android:text="0 000 VNĐ"
+            android:text="0 000 đ"
             android:textStyle="bold" />
     </RelativeLayout>
 

@@ -38,11 +38,11 @@ public class CategoryProductFragment extends Fragment {
                 switch (position){
                     case 0: tab.setText("Món mới");
                         break;
-                    case 1: tab.setText("Đặc biệt");
+                    case 1: tab.setText("Gà Rán - Gà Quay");
                         break;
-                    case 2:tab.setText("Combo1");
+                    case 2:tab.setText("Burger - Cơm - Mì ý");
                         break;
-                    case 3:tab.setText("Combo2");
+                    case 3:tab.setText("Thức uống - Tráng miệng");
                         break;
                 }
             }

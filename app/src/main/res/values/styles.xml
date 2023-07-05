@@ -3,7 +3,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">#FC5353</item>
+        <item name="colorPrimaryDark">#DF2020</item>
     </style>
 
     <declare-styleable name="AspectRatioView">

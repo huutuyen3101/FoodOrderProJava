@@ -50,7 +50,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/define_dimen_10"
                     android:text="@string/label_price_0"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/text_size_xnormal"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/bg_green_shape_corner_6"
+                android:background="@color/colorPrimary"
                 android:padding="@dimen/define_dimen_12"
                 android:text="@string/order_cart"
                 android:textColor="@color/white"

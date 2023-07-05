@@ -14,7 +14,7 @@ public interface Constant {
 
     String FIREBASE_URL = "https://foodorder-8290b-default-rtdb.firebaseio.com";
 
-    String CURRENCY = " 000 VNĐ";
+    String CURRENCY = " 000 đ";
     int TYPE_PAYMENT_CASH = 1;
     String PAYMENT_METHOD_CASH = "Tiền mặt";
     String ADMIN_EMAIL_FORMAT = "@admin.com";

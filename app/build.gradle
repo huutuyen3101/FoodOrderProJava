@@ -70,4 +70,8 @@ dependencies {
 
     def tedimagepicker_version = "1.4.2"
     implementation "io.github.ParkSangGwon:tedimagepicker:$tedimagepicker_version"
+
+
+
+
 }

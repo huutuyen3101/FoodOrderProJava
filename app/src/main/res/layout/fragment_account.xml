@@ -7,44 +7,64 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:padding="@dimen/define_dimen_16"
+    android:id="@+id/aa"
     tools:ignore="ContentDescription, UseCompoundDrawables">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/img"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="@dimen/define_dimen_50"
-            android:layout_height="@dimen/define_dimen_50"
-            android:src="@drawable/ic_avatar_default" />
+<!--        <ImageView-->
+<!--            android:id="@+id/img"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:layout_width="@dimen/define_dimen_50"-->
+<!--            android:layout_height="@dimen/define_dimen_50"-->
+<!--            android:src="@drawable/ic_avatar_default" />-->
 
-        <TextView
-            android:id="@+id/tv_name"
-            app:layout_constraintStart_toEndOf="@+id/img"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="@dimen/define_dimen_20"
-            android:textColor="@color/black"
-            android:textStyle="bold"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/tv_address"
-            app:layout_constraintStart_toEndOf="@+id/img"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            android:layout_marginStart="@dimen/define_dimen_20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
 
-        <TextView
-            android:id="@+id/tv_phone"
-            app:layout_constraintStart_toEndOf="@+id/img"
-            app:layout_constraintTop_toBottomOf="@+id/tv_address"
-            android:layout_marginStart="@dimen/define_dimen_20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="CHÀO MỪNG ĐÃ TRỞ LẠI,"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_address"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/img"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_name"-->
+<!--            android:layout_marginStart="@dimen/define_dimen_20"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_phone"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/img"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_address"-->
+<!--            android:layout_marginStart="@dimen/define_dimen_20"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -63,10 +83,37 @@
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/define_dimen_16"
         android:layout_marginBottom="@dimen/define_dimen_30"
-        android:background="@color/textColorPrimary" />
+        android:background="#A3A4A5" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/define_dimen_10"
+        android:paddingBottom="@dimen/define_dimen_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons8userr24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin cá nhân"
+            android:layout_marginStart="@dimen/define_dimen_10"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/layout_order_history"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -83,20 +130,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/order_history"
+            android:textStyle="bold"
             android:layout_marginStart="@dimen/define_dimen_10"
             android:textColor="@color/textColorPrimary"
             android:textSize="@dimen/text_size_small" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="@dimen/define_dimen_5"
-        android:layout_marginBottom="@dimen/define_dimen_5"
-        android:background="@color/dividerColor" />
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/define_dimen_5"-->
+<!--        android:layout_marginBottom="@dimen/define_dimen_5"-->
+<!--        android:background="@color/dividerColor" />-->
 
     <LinearLayout
         android:id="@+id/layout_change_password"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -113,20 +162,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/change_password"
+            android:textStyle="bold"
             android:layout_marginStart="@dimen/define_dimen_10"
             android:textColor="@color/textColorPrimary"
             android:textSize="@dimen/text_size_small" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="@dimen/define_dimen_5"
-        android:layout_marginBottom="@dimen/define_dimen_5"
-        android:background="@color/dividerColor" />
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/define_dimen_5"-->
+<!--        android:layout_marginBottom="@dimen/define_dimen_5"-->
+<!--        android:background="@color/dividerColor" />-->
 
     <LinearLayout
         android:id="@+id/layout_sign_out"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -143,6 +194,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_out"
+            android:textStyle="bold"
             android:layout_marginStart="@dimen/define_dimen_10"
             android:textColor="@color/textColorPrimary"
             android:textSize="@dimen/text_size_small" />

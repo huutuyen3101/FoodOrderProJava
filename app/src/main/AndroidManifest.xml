@@ -29,6 +29,9 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.InformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CategoryProductActivity"
             android:exported="false">
             <meta-data

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Food Order Pro Java</string>
+    <string name="app_name">FASTFOOD</string>
     <string name="splash_text">Highly committed to quality products &amp; excellent services</string>
     <string name="tfc">TFC</string>
 
@@ -11,6 +11,7 @@
     <string name="contact">Liên hệ</string>
     <string name="account">Tài khoản</string>
     <string name="order">Đơn hàng</string>
+    <string name="information">Thông tin cá nhân</string>
 
     // action
     <string name="action_ok">Đồng ý</string>
@@ -26,7 +27,7 @@
     <string name="msg_exit_app">Bạn có muốn thoát ứng dụng?</string>
 
     <string name="category_title">Danh mục</string>
-    <string name="food_suggest">Gợi ý món ăn</string>
+    <string name="food_suggest">CÓ THỂ BẠN SẼ THÍCH MÓN NÀY</string>
     <string name="food_detail_title">Chi tiết món ăn</string>
     <string name="add_to_cart">Thêm vào giỏ hàng</string>
     <string name="added_to_cart">Đã thêm vào giỏ hàng</string>
@@ -35,7 +36,7 @@
     <string name="name_require">Vui lòng nhập Họ và Tên</string>
     <string name="comment_require">Vui lòng nhập phản hồi của bạn</string>
     <string name="order_cart">Đặt Hàng</string>
-    <string name="total">Tổng Tiền:</string>
+    <string name="total">Tổng thanh toán:</string>
     <string name="delete">Xóa</string>
     <string name="confirm_delete_food">Xác nhận xóa khỏi giỏ hàng</string>
     <string name="message_delete_food">Bạn có chắc chắn muốn xóa món ăn này không?</string>
@@ -43,7 +44,7 @@
     <string name="order_detail">Chi tiết đơn hàng</string>
     <string name="address_delivery">Địa chỉ giao hàng</string>
     <string name="message_enter_infor_order">Vui lòng điền đầy đủ thông tin giao hàng</string>
-    <string name="hint_search_name">Tên món ăn…</string>
+    <string name="hint_search_name">Tìm món ăn</string>
     <string name="price_label">Giá:</string>
     <string name="description_label">Mô tả</string>
     <string name="more_image_label">Một số hình ảnh khác</string>
@@ -52,13 +53,14 @@
     <string name="label_sub">-</string>
     <string name="label_add">+</string>
     <string name="label_quantity_1">1</string>
-    <string name="label_price_0">0 VNĐ</string>
+    <string name="label_price_0">0 đ</string>
 
-    <string name="feedback_name">Họ và Tên (*)</string>
+    <string name="feedback_name">Họ và Tên</string>
     <string name="feedback_email">Email</string>
     <string name="feedback_phone">Số điện thoại</string>
-    <string name="feedback_comment">Bình luận (*)</string>
+    <string name="feedback_comment">Bình luận </string>
     <string name="send_feedback">Gửi phản hồi</string>
+    <string name="send_change">Lưu thay đổi</string>
 
     <string name="label_id">Mã đơn hàng:</string>
     <string name="label_email">Email:</string>
@@ -102,7 +104,7 @@
     <string name="report">Báo cáo doanh thu</string>
     <string name="add_food">Thêm món ăn</string>
     <string name="edit_food">Chỉnh sửa món ăn</string>
-    <string name="currency_food">000 VNĐ</string>
+    <string name="currency_food"> đ</string>
     <string name="percent">%</string>
     <string name="popular">Phổ biến</string>
 
@@ -168,10 +170,10 @@
     <string name="msg_delete_title">Xác nhận xóa</string>
     <string name="msg_confirm_delete">Bạn có chắc chắn muốn xóa mục này không?</string>
     <string name="msg_delete_movie_successfully">Xoá món ăn thành công !!!</string>
-    <string name="_26_phan_nh_ph_ng_p3_hcm">26 Phan Đình Phùng, P3, HCM</string>
-    <string name="category_food">Danh mục món</string>
-    <string name="new_food">Món mới</string>
-    <string name="special_food">Món đặc biệt</string>
+    <string name="_26_phan_nh_ph_ng_p3_hcm">Địa chỉ</string>
+    <string name="category_food">DANH MỤC MÓN ĂN</string>
+    <string name="new_food">Món Mới</string>
+    <string name="special_food">Gà Rán - Gà Quay</string>
     <string name="food_type">"Phân loại "</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

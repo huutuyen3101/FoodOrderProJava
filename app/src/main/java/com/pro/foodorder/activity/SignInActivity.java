@@ -1,6 +1,10 @@
 package com.pro.foodorder.activity;
 
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,7 +27,7 @@ public class SignInActivity extends BaseActivity {
         mActivitySignInBinding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(mActivitySignInBinding.getRoot());
 
-        mActivitySignInBinding.rdbUser.setChecked(true);
+//        mActivitySignInBinding.rdbUser.setChecked(true);
 
         mActivitySignInBinding.layoutSignUp.setOnClickListener(
                 v -> GlobalFunction.startActivity(SignInActivity.this, SignUpActivity.class));
@@ -74,5 +78,22 @@ public class SignInActivity extends BaseActivity {
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+
+    public void ShowHidePass(View view) {
+
+        if(view.getId()==R.id.show_pass_btn){
+            if(mActivitySignInBinding.edtPassword.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
+                ((ImageView)(view)).setImageResource(R.drawable.icons8_hide_24);
+                //Show Password
+                mActivitySignInBinding.edtPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            }
+            else{
+                ((ImageView)(view)).setImageResource(R.drawable.icons8_show_24);
+                //Hide Password
+                mActivitySignInBinding.edtPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            }
+        }
     }
 }

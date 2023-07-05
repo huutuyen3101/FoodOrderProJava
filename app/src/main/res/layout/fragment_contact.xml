@@ -15,28 +15,16 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/define_dimen_120"
             android:layout_height="@dimen/define_dimen_120"
-            android:src="@drawable/img_splash" />
+            android:src="@drawable/backgrff" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/define_dimen_10"
-            android:text="@string/tfc"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/text_size_xnormal" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/define_dimen_10"
-            android:gravity="center"
-            android:text="@string/splash_text"
-            android:textColor="@color/textColorPrimary"
-            android:textSize="@dimen/text_size_small" />
+
+
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvData"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/define_dimen_14"
