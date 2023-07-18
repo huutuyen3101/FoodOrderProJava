@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+autonumber
+actor KhachHang
+participant App #lightblue
+participant HeThong #lightblue
+participant Database #lightblue
+activate KhachHang #cyan
+KhachHang -> App : : Nhấn quên mật khẩu
+activate App #cyan
+
+activate App #cyan
+autonumber 1.1
+App --> KhachHang: : Hiển thị nhập Email
+
+autonumber 2
+KhachHang -> App: : Nhập thông tin
+
+autonumber 2.1
+
+App -> HeThong: : Kiểm tra Email có tồn tại
+deactivate App
+activate HeThong #cyan
+autonumber 2.1.1
+HeThong -> Database: : Kiểm tra dữ liệu
+autonumber 2.1.2
+activate Database #cyan
+
+Database-->HeThong: : Kết quả trả về
+
+deactivate Database
+deactivate HeThong
+alt successful case
+deactivate App
+
+autonumber 3
+HeThong --> App: : Không tồn tại
+activate HeThong #cyan
+activate App #cyan
+autonumber 3.1
+App --> KhachHang: : Hiển thị không tồn tại
+
+autonumber 4
+HeThong --> App: : tồn tại
+deactivate HeThong
+autonumber 4.1
+App -->KhachHang: :Hiển thị tồn tại
+
+end
+
+autonumber 5
+KhachHang->App: :Nhấn gửi quên mật khẩu
+
+autonumber 5.1
+
+App->HeThong: :Gửi email lên
+activate HeThong #cyan
+autonumber 5.1.1
+HeThong->Database: :Tiến hành gửi
+activate Database #cyan
+
+Database-->HeThong:: Trả về mã tại email
+HeThong-->App::Trả mã tại email
+App-->KhachHang::Kiểm tra email
+deactivate HeThong
+deactivate Database
+autonumber 6
+KhachHang->App::Nhấn vào mã gửi về
+autonumber 6.1
+App-->KhachHang::Hiển thị nhập password mới
+autonumber 7
+KhachHang->App::Nhập password mới
+autonumber 7.1
+App->Database::Cập nhật lại password
+activate Database #cyan
+deactivate Database
+
+autonumber 7.2
+App -->KhachHang: :Hiển thị cậ nhật thành công
+@enduml

@@ -44,7 +44,7 @@ public class AddFoodActivity extends BaseActivity {
     private ActivityAddFoodBinding mActivityAddFoodBinding;
     private boolean isUpdate;
     private Food mFood;
-    private String[] arr = {"Mới","Đặc biệt","Combo1", "Combo2"};
+    private String[] arr = {"Món Mới","Gà Rán - Gà Quay","Burger - Cơm - Mì Ý", "Thức Uống - Tráng Miệng"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -265,12 +265,12 @@ public class AddFoodActivity extends BaseActivity {
         String[] imageUrls = new String[]{strImage, strImageBanner};
 
         int type = 1;
-        if (mActivityAddFoodBinding.spnType.getSelectedItem().toString().equals("Mới")){
+        if (mActivityAddFoodBinding.spnType.getSelectedItem().toString().equals("Món Mới")){
              type = 1;
-        }else if(mActivityAddFoodBinding.spnType.getSelectedItem().toString().equals("Đặc biệt")){
+        }else if(mActivityAddFoodBinding.spnType.getSelectedItem().toString().equals("Gà Rán - Gà Quay")){
             type = 2;
 
-        }else if(mActivityAddFoodBinding.spnType.getSelectedItem().toString().equals("Combo1")){
+        }else if(mActivityAddFoodBinding.spnType.getSelectedItem().toString().equals("Burger - Cơm - Mì Ý")){
             type = 3;
 
         }else{

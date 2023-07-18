@@ -2,6 +2,8 @@ package com.pro.foodorder.fragment.admin;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -81,6 +83,7 @@ public class AdminHomeFragment extends BaseFragment {
 
     private void initListener() {
         mFragmentAdminHomeBinding.btnAddFood.setOnClickListener(v -> onClickAddFood());
+        mFragmentAdminHomeBinding.btnAddFood.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
 
         mFragmentAdminHomeBinding.imgSearch.setOnClickListener(view1 -> searchFood());
 
@@ -113,6 +116,7 @@ public class AdminHomeFragment extends BaseFragment {
 
     private void onClickAddFood() {
         GlobalFunction.startActivity(getActivity(), AddFoodActivity.class);
+
     }
 
     private void onClickEditFood(Food food) {

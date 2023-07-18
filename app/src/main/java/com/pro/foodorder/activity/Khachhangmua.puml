@@ -1,0 +1,69 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor KhachHang
+participant App #lightblue
+participant HeThong #lightblue
+participant Database #lightblue
+activate KhachHang #cyan
+KhachHang -> App : : Đăng nhập thành công
+activate App #cyan
+App -> App: : Hiển thị danh sách món ăn
+activate App #cyan
+
+KhachHang->App: : Nhấn vào món ăn để thêm vào giỏ hàng
+deactivate App
+deactivate
+
+
+App->HeThong: : Kiểm tra giỏ hàng
+activate HeThong #cyan
+
+alt successful case
+
+activate App #cyan
+autonumber 4.1
+HeThong-->App: :Giỏ hàng rỗng
+autonumber 5
+App-->KhachHang::Hiển thị giỏ hàng trống
+
+autonumber 4.2
+HeThong-->App::Giỏ hàng được thêm
+autonumber 4.2.1
+App-->KhachHang::Hiển thị giỏ hàng được thêm
+ end
+
+autonumber 6
+KhachHang->App:: Nhập thông tin giao hàng
+autonumber 6.1
+App->HeThong::Kiểm tra thông tin
+
+
+alt successful case
+HeThong-->App::Thông tin chưa đủ
+autonumber 6.2.1
+App-->KhachHang: :Hiển thị thông báo nhập đầy đủ
+deactivate App
+
+
+autonumber 6.3
+HeThong-->App::Thông tin đầy đủ
+activate App #cyan
+autonumber 6.3.1
+App-->KhachHang:: Hiển thị thông tin
+end
+deactivate HeThong
+autonumber 7
+KhachHang->App::Nhấn đặt hàng
+autonumber 7.1
+App->Database::Cập nhật dữ liệu
+activate Database #cyan
+deactivate Database
+
+App-->KhachHang::đặt hàng thành công
+
+
+@enduml

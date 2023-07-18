@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor KhachHang
+participant App #lightblue
+participant HeThong #lightblue
+participant Database #lightblue
+activate KhachHang #cyan
+KhachHang -> App : : Vào trang đăng kí
+activate App #cyan
+App -> App: : Hiển thị đăng kí
+activate App #cyan
+
+App --> KhachHang: : Hiển thị đăng kí
+deactivate App
+deactivate
+
+
+KhachHang -> App: : Nhập thông tin đăng kí
+activate App #cyan
+KhachHang -> App: : Nhấn nút đăng kí
+autonumber 5.1
+
+App -> HeThong: : Kiểm tra đăng kí
+activate HeThong #cyan
+
+autonumber 6
+HeThong -> Database: : Kiểm tra dữ liệu
+autonumber 6.1
+activate Database #cyan
+Database-->HeThong: : Kết quả trả về
+
+deactivate Database
+
+alt successful case
+autonumber 5.2
+HeThong --> App: : Đăng kí không thành công
+
+deactivate HeThong
+autonumber 5.3
+App --> KhachHang: : Đăng kí không thành công
+
+autonumber 7
+HeThong --> App: : Đăng kí thành công
+
+autonumber 7.1
+App -->KhachHang: :Đăng kí không thành công
+end
+
+autonumber 7.2
+App->Database: :Cập nhật cơ sơ dữ liệu
+activate Database #cyan
+deactivate
+
+
+autonumber 7.3
+App -->KhachHang: :Hiển thị màng hình
+@enduml

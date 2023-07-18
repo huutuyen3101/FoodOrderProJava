@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor QuanliVSKhachHang #cyan
+participant App #lightblue
+participant HeThong #lightblue
+participant Database #lightblue
+activate QuanliVSKhachHang #cyan
+QuanliVSKhachHang -> App : : Đăng nhập thành công
+activate App #cyan
+App -> App: : Hiển thị danh sách XXX
+activate App #cyan
+deactivate App
+deactivate
+
+ QuanliVSKhachHang->App: : Nhập tên XXX
+activate App #cyan
+App->Database: :Lấy dữ liệu XXX
+activate Database #cyan
+autonumber 4.1
+Database-->HeThong: :Thêm tên XXX vào danh sách XXX
+
+activate HeThong #cyan
+deactivate
+deactivate Database
+autonumber 5
+HeThong-->App: :Gợi ý tên XXX tìm kiếm
+activate HeThong #cyan
+deactivate HeThong
+deactivate App
+
+App-->QuanliVSKhachHang: :Hiển thị tên XXX gợi ý
+activate App #cyan
+
+QuanliVSKhachHang->App: :Nhập tên tìm kiếm
+autonumber 7.1
+App->HeThong: :Kiểm tra tên XXX có tồn tại
+activate HeThong #cyan
+autonumber 7.1.1
+HeThong->Database: :Kiểm tra dữ liệu trên Database
+activate Database #cyan
+deactivate HeThong
+autonumber 8
+
+Database--> HeThong::Kết quả trả về
+
+activate HeThong #cyan
+deactivate HeThong
+alt successful case
+
+ HeThong-->App::Không tồn tại
+ activate HeThong #cyan
+autonumber 9.1
+App-->QuanliVSKhachHang::Hiển thị rỗng
+autonumber 10
+HeThong-->App::Tồn tại
+
+autonumber 10.1
+App-->QuanliVSKhachHang::Hiển thị tên XXX gợi ý
+deactivate HeThong
+end
+
+App-->QuanliVSKhachHang::Hiển thị tên XXX
+
+@enduml

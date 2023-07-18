@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor Quanli #cyan
+participant App #lightblue
+participant HeThong #lightblue
+participant Database #lightblue
+activate Quanli #cyan
+Quanli -> App : : Đăng nhập thành công
+activate App #cyan
+
+App -> App: : Hiển thị danh sách
+activate App #cyan
+deactivate App
+Quanli->App: :Nhấn xóa hoặc sửa
+autonumber 3.1
+App->HeThong: :Kiểm tra vị trí XXX có tồn tại
+activate HeThong #cyan
+autonumber 3.1.1
+HeThong->Database: :Kiểm tra dữ liệu trên database
+activate Database #cyan
+deactivate Database
+autonumber 4
+Database-->HeThong: :Kết quả trả về
+activate Database #cyan
+deactivate Database
+deactivate HeThong
+deactivate App
+
+
+alt successful case
+HeThong-->App ::Không tồn tại
+activate App #cyan
+activate HeThong #cyan
+autonumber 5.1
+App-->Quanli ::Hiển thị không thành công
+autonumber 6
+HeThong-->App:: Tồn tại
+autonumber 6.1
+App-->Quanli: Hiển thị thành công
+deactivate HeThong
+deactivate App
+end
+
+autonumber 7
+App->Database::Cập nhật dữ liệu
+
+activate App #cyan
+activate Database #cyan
+deactivate Database
+
+autonumber 8
+App-->Quanli ::Hiển thị thành công cập nhật hoặc xóa
+
+
+
+
+
+
+
+@enduml

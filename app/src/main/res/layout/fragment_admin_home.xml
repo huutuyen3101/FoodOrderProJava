@@ -5,12 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white">
 
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
     <RelativeLayout
         android:id="@+id/layout_search"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/define_dimen_10"
         android:background="@drawable/bg_white_corner_6_border_gray"
+
         android:padding="@dimen/define_dimen_2">
 
         <EditText
@@ -38,23 +46,22 @@
             android:src="@drawable/ic_search"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:src="@android:drawable/ic_menu_add"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_food"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/layout_search"
+        android:layout_below="@+id/liner"
         android:layout_marginStart="@dimen/define_dimen_10"
         android:layout_marginBottom="@dimen/define_dimen_10" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_add_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="@dimen/define_dimen_12"
-        android:layout_marginBottom="@dimen/define_dimen_12"
-        android:src="@android:drawable/ic_menu_add"
-        tools:ignore="ContentDescription" />
+
 </RelativeLayout>

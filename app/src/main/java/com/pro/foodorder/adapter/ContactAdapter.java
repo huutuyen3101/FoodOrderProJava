@@ -53,21 +53,21 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
                 holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_call));
                 break;
 
-            case Contact.GMAIL:
-                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_gmail));
-                break;
-
-            case Contact.SKYPE:
-                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_skype));
-                break;
-
-            case Contact.YOUTUBE:
-                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_youtube));
-                break;
-
-            case Contact.ZALO:
-                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_zalo));
-                break;
+//            case Contact.GMAIL:
+//                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_gmail));
+//                break;
+//
+//            case Contact.SKYPE:
+//                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_skype));
+//                break;
+//
+//            case Contact.YOUTUBE:
+//                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_youtube));
+//                break;
+//
+//            case Contact.ZALO:
+//                holder.mItemContactBinding.tvContact.setText(context.getString(R.string.label_zalo));
+//                break;
         }
 
         holder.mItemContactBinding.layoutItem.setOnClickListener(v -> {
@@ -80,21 +80,21 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
                     iCallPhone.onClickCallPhone();
                     break;
 
-                case Contact.GMAIL:
-                    GlobalFunction.onClickOpenGmail(context);
-                    break;
-
-                case Contact.SKYPE:
-                    GlobalFunction.onClickOpenSkype(context);
-                    break;
-
-                case Contact.YOUTUBE:
-                    GlobalFunction.onClickOpenYoutubeChannel(context);
-                    break;
-
-                case Contact.ZALO:
-                    GlobalFunction.onClickOpenZalo(context);
-                    break;
+//                case Contact.GMAIL:
+//                    GlobalFunction.onClickOpenGmail(context);
+//                    break;
+//
+//                case Contact.SKYPE:
+//                    GlobalFunction.onClickOpenSkype(context);
+//                    break;
+//
+//                case Contact.YOUTUBE:
+//                    GlobalFunction.onClickOpenYoutubeChannel(context);
+//                    break;
+//
+//                case Contact.ZALO:
+//                    GlobalFunction.onClickOpenZalo(context);
+//                    break;
             }
         });
     }

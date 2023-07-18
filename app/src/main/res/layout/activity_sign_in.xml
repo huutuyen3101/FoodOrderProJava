@@ -3,31 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:ignore="Autofill" >
+    tools:ignore="Autofill">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/define_dimen_150"
+        android:layout_height="@dimen/define_dimen_150"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/backgrff"
+        app:civ_border_color="@color/yellow"
+        app:civ_border_width="2dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_above="@+id/layout_sign_up"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="157dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/define_dimen_18">
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/sign_in"-->
-<!--            android:textColor="@color/colorPrimaryDark"-->
-<!--            android:textSize="@dimen/text_size_xnormal"-->
-<!--            android:textStyle="bold" />-->
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/sign_in"-->
+        <!--            android:textColor="@color/colorPrimaryDark"-->
+        <!--            android:textSize="@dimen/text_size_xnormal"-->
+        <!--            android:textStyle="bold" />-->
 
         <EditText
             android:id="@+id/edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_email"
             android:layout_marginTop="@dimen/define_dimen_20"
+            android:hint="@string/hint_email"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
             android:textColor="@color/textColorPrimary"
@@ -38,8 +56,8 @@
             android:id="@+id/layout_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="@dimen/define_dimen_10">
+            android:layout_marginTop="@dimen/define_dimen_10"
+            android:background="@color/white">
 
             <EditText
                 android:id="@+id/edt_password"
@@ -67,37 +85,37 @@
 
         </RelativeLayout>
 
-<!--        <EditText-->
-<!--            android:id="@+id/edt_password"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/define_dimen_10"-->
-<!--            android:hint="@string/hint_password"-->
-<!--            android:imeOptions="actionDone"-->
-<!--            android:inputType="textPassword"-->
-<!--            android:textColor="@color/textColorPrimary"-->
-<!--            android:textSize="@dimen/text_size_small" />-->
+        <!--        <EditText-->
+        <!--            android:id="@+id/edt_password"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/define_dimen_10"-->
+        <!--            android:hint="@string/hint_password"-->
+        <!--            android:imeOptions="actionDone"-->
+        <!--            android:inputType="textPassword"-->
+        <!--            android:textColor="@color/textColorPrimary"-->
+        <!--            android:textSize="@dimen/text_size_small" />-->
 
         <RadioGroup
-            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/define_dimen_20"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="invisible">
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/rdb_admin"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/admin" />-->
+            <!--            <RadioButton-->
+            <!--                android:id="@+id/rdb_admin"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/admin" />-->
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/rdb_user"-->
-<!--                android:checked="true"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="@dimen/define_dimen_20"-->
-<!--                android:text="@string/user" />-->
+            <!--            <RadioButton-->
+            <!--                android:id="@+id/rdb_user"-->
+            <!--                android:checked="true"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/define_dimen_20"-->
+            <!--                android:text="@string/user" />-->
         </RadioGroup>
 
         <Button
@@ -116,10 +134,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/define_dimen_10"
             android:padding="@dimen/define_dimen_10"
-            android:textSize="@dimen/text_size_small"
+            android:text="@string/forgot_password"
             android:textColor="@color/yellow"
-            android:textStyle="bold"
-            android:text="@string/forgot_password"/>
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

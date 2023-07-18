@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor Quanli #cyan
+participant App #lightblue
+participant HeThong #lightblue
+participant Database #lightblue
+activate Quanli #cyan
+Quanli -> App : : Đăng nhập thành công
+activate App #cyan
+
+App -> App: : Hiển thị danh sách XXX
+activate App #cyan
+deactivate App
+deactivate
+
+
+ Quanli->App: : Nhấn thêm XXX
+activate App #cyan
+autonumber 3.1
+App-->Quanli: : Hiện thị nhập XXX
+
+autonumber 4
+Quanli -> App: : Nhập thêm XXX
+autonumber 4.1
+
+App -> HeThong: : Kiểm tra việc nhập
+activate HeThong #cyan
+HeThong-->App: :Nhập thiếu
+App-->Quanli: :Hiển thị nhập lại
+autonumber 4.3
+HeThong-->App: :Nhập đầy đủ thông tin
+
+autonumber 4.3.1
+App-->Quanli: :Hiển thị thông tin
+deactivate App
+deactivate HeThong
+autonumber 5
+Quanli->App: :Nhấn nút thêm
+activate App #cyan
+autonumber 5.1
+App->Database: :Thêm dữ liệu vào cơ sở dữ liệu
+activate Database #cyan
+Database-->App: :Trả về kết quả
+
+App-->Quanli: :Thêm XXX thành công
+
+
+
+@enduml
